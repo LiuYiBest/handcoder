@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async范例
+        const delayer = t => new Promise((resolve) => {
+            setTimeout(resolve, t)
+        })
+        async function start() {
+            console.log(1)
+            await delayer(1000)
+            console.log(2)
+            await delayer(1000)
+            console.log(3)
+            await delayer(1000)
+        }
+        start()
+    </script>
+
+</body>
+
+</html>
