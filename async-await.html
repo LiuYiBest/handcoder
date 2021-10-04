@@ -24,6 +24,18 @@
             await delayer(1000)
         }
         start()
+        //Generator范例
+        function fn(a, b) {
+            console.log('fn...');
+            return a + b
+        }
+        function* gen(x) {
+            console.log('x')
+            let y = yield fn(x, 100) + 3
+            console.log(y)
+            return 200
+        }
+        gen()
     </script>
 
 </body>
