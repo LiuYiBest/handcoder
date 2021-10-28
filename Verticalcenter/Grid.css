@@ -9,3 +9,13 @@
   .child1 {
     background: red;
   } 
+  .box2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    display: grid;
+  }
+  .child2 {
+    background: red;
+    margin: auto;
+  }  
