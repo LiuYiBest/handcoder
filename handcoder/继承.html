@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <script>
+    <!-- <script>
         function Animal(color) {
             this.color = color
         }
-        Animal.prototype.move = function () { } // 动物可以动
+        Animal.prototype.move = function () { }
         function Dog(color, name) {
             Animal.call(this, color) // 或者 Animal.apply(this, arguments)
             this.name = name
@@ -27,6 +27,23 @@
         Dog.prototype.say = function () { console.log('汪') }
 
         var dog = new Dog('黄色', '阿黄')
+    </script> -->
+
+    <!-- 使用extends -->
+    <script>
+        class Animal {
+            constructor(color) {
+                this.color = color
+            }
+            move() { }
+        }
+        class Dog extends Animal {
+            constructor(color, name) {
+                super(color)
+                this.name = name
+            }
+            say() { }
+        }
     </script>
 </body>
 
